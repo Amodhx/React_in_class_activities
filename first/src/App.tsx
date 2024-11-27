@@ -30,43 +30,40 @@
 //
 // export default App
 
+// import './App.css'
+// import {ReactElement} from "react";
+// import DashBoard from "./component_two/DashBoard.tsx";
+// import LoginComponent from "./component_two/LoginComponent.tsx";
+//
+// function App() {
+//
+//     const isLoggedIn :boolean = true;
+//     let content:ReactElement;
+//
+//     if (isLoggedIn) {
+//         content = <DashBoard/>
+//     }else {
+//         content = <LoginComponent/>
+//     }
+//     return (
+//         <>
+//             {content}
+//         </>
+//     )
+// }
+//
+// export default App
+
+
 import './App.css'
-import Item from "./component/Item.tsx";
+import Subject from "./component/Subject.tsx";
 
 function App() {
 
-    const itemList = [
-        {
-            title:"AAA",
-            description:"sda"
-        },
-        {
-            title:"BBB",
-            description:"sda"
-        },
-        {
-            title:"CCC",
-            description:"sda"
-        }
-    ]
-
-    const itemsArray = []
-    for (const item of itemList) {
-        itemsArray.push(
-            <Item title={item.title} description={item.description} />
-        );
-    }
-
-
     return (
         <>
-            {/*Way one*/}
-            {itemList.map((item, ) => (
-                <Item title={item.title} description={item.description}/>
-            ))}
-
-            {/*Way two*/}
-            {itemsArray}
+            <Subject name = "RAD">Lorem</Subject>
+            <Subject name="MAD">Lorem</Subject>
         </>
     )
 }
