@@ -55,17 +55,41 @@
 // export default App
 
 
+// import './App.css'
+// import Subject from "./component/Subject.tsx";
+//
+// function App() {
+//
+//     return (
+//         <>
+//             <Subject name = "RAD">Lorem</Subject>
+//             <Subject name="MAD">Lorem</Subject>
+//         </>
+//     )
+// }
+//
+// export default App
+
+
 import './App.css'
-import Subject from "./component/Subject.tsx";
+import Case from "./component_three/Case.tsx";
+import {useState} from "react";
+
 
 function App() {
 
+    const [content, setContent] = useState("0");
+
+    function handleClick(num:number) {
+        setContent(String(++num));
+    }
+
     return (
         <>
-            <Subject name = "RAD">Lorem</Subject>
-            <Subject name="MAD">Lorem</Subject>
+            <Case content={content} function={handleClick}></Case>
         </>
     )
 }
 
 export default App
+
